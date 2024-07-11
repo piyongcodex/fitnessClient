@@ -1,0 +1,16 @@
+{
+  "endpoints": {
+    "login": "/users/login",
+    "register": "/users/register",
+    "details": "/users/details",
+    "addWorkout": "/wokouts/addWorkout",
+    "getMyWorkouts": "/wokouts/getMyWorkouts",
+    "updateWorkout": "/wokouts/updateWorkout/:id",
+    "deleteWorkout": "/wokouts/deleteWorkout/:id",
+    "completeWorkoutStatus": "/wokouts/completeWorkoutStatus/:id"
+  },
+  "credentials": {
+    "email": "admin@mail.com",
+    "password": "12345678"
+  }
+}
