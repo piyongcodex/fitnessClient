@@ -33,7 +33,7 @@ export default function Register() {
         console.log(data);
 
         //data will only contain an email property if we can properly save our user.
-        if (data.message === "Registered Successfully") {
+        if (data.message === "Registered SUccessfully") {
           setEmail("");
           setPassword("");
           setConfirmPassword("");
