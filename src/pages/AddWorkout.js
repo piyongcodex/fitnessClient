@@ -22,7 +22,7 @@ const AddWorkout = () => {
       },
     });
 
-    fetch(`https://fitnessapi-uiw7.onrender.com/workouts/`, {
+    fetch(`https://fitnessapi-uiw7.onrender.com/workouts/addWorkout`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

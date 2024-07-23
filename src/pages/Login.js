@@ -6,7 +6,7 @@ import UserContext from "../UserContext";
 
 export default function Login() {
   const { user, setUser } = useContext(UserContext);
-  console.log(user.id);
+  // console.log(user.id);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +28,7 @@ export default function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
 
         localStorage.setItem("token", data.access);
         retrieveUserDetails(data.access);

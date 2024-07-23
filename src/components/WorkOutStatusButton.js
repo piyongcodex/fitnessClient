@@ -14,7 +14,7 @@ const WorkOutStatusButton = ({ workout, status, reload }) => {
     });
 
     fetch(
-      `https://fitnessapi-uiw7.onrender.com/workouts/completeWorkout/${workoutId}`,
+      `https://fitnessapi-uiw7.onrender.com/workouts/completeWorkoutStatus/${workoutId}`,
       {
         method: "PATCH",
         headers: {

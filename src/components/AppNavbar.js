@@ -9,7 +9,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function AppNavbar() {
   const { user } = useContext(UserContext);
-  console.log(user.id);
+  // console.log(user.id);
   return (
     <Navbar bg="dark" data-bs-theme="dark" expand="lg">
       <Container fluid>
