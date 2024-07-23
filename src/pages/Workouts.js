@@ -8,7 +8,7 @@ import UserContext from "../UserContext";
 
 const Workouts = () => {
   const { user } = useContext(UserContext);
-  console.log(user.id);
+  // console.log(user.id);
   const [workouts, setWorkouts] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedWorkout, setSelectedWorkout] = useState(null);
