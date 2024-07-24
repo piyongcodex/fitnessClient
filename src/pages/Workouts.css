@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+.workout {
+  background-image: url("../../public/workouts.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100vw;
+}
+.borderless-table,
+.borderless-table th,
+.borderless-table td {
+  border: none !important;
+}
+
+.table thead th {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+/* Define font styles for table data cells */
+.table tbody td {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+/* Additional styles for table, if needed */
+.table {
+  border-collapse: collapse; /* Ensure borders collapse neatly */
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 10px; /* Adjust padding as needed */
+  border: 1px solid #ddd; /* Border color and style */
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5; /* Highlight row on hover */
+}

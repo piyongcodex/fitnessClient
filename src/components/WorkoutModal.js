@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Form, Dropdown } from "react-bootstrap";
 import Swal from "sweetalert2";
+import "./WorkoutModal.css";
 
 const WorkoutModal = ({ show, handleClose, workout, reload }) => {
   const [formData, setFormData] = useState({
@@ -80,9 +81,9 @@ const WorkoutModal = ({ show, handleClose, workout, reload }) => {
   };
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} className="modal">
       <Modal.Header closeButton>
-        <Modal.Title>Edit Workout</Modal.Title>
+        <Modal.Title className="modal-title">Edit Workout</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
@@ -92,6 +93,7 @@ const WorkoutModal = ({ show, handleClose, workout, reload }) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              className="modal-name"
             />
           </Form.Group>
           <Form.Group controlId="formWorkoutDuration" className="mb-3">
@@ -100,25 +102,40 @@ const WorkoutModal = ({ show, handleClose, workout, reload }) => {
               name="duration"
               value={formData.duration}
               onChange={handleChange}
+              className="modal-duration"
             />
           </Form.Group>
           <Form.Group controlId="formWorkoutStatus" className="mb-3">
             <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
+              <Dropdown.Toggle
+                variant="success"
+                id="dropdown-basic"
+                className="dropdown-toggle-custom"
+              >
                 {formData.status || "Select Status"}
               </Dropdown.Toggle>
 
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={() => handleStatusChange("pending")}>
+              <Dropdown.Menu className="dropdown-menu-custom">
+                <Dropdown.Item
+                  className="dropdown-item-custom"
+                  onClick={() => handleStatusChange("pending")}
+                >
                   Pending
                 </Dropdown.Item>
-                <Dropdown.Item onClick={() => handleStatusChange("completed")}>
+                <Dropdown.Item
+                  className="dropdown-item-custom"
+                  onClick={() => handleStatusChange("completed")}
+                >
                   Completed
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button
+            variant="primary"
+            type="submit"
+            className="dropdown-item-custom"
+          >
             Save changes
           </Button>
         </Form>

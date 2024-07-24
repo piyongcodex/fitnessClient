@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+.navbar-brand {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.nav-link {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* Optional: add hover effects */
+}

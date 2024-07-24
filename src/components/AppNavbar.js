@@ -3,7 +3,10 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import UserContext from "../UserContext";
+import "./AppNavbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import { Link, NavLink } from "react-router-dom";
 
@@ -11,8 +14,8 @@ export default function AppNavbar() {
   const { user } = useContext(UserContext);
   // console.log(user.id);
   return (
-    <Navbar bg="dark" data-bs-theme="dark" expand="lg">
-      <Container fluid>
+    <Navbar expand="lg">
+      <Container fluid className="nav">
         <Navbar.Brand as={Link} to="/">
           PiyongX - Fitness Tracker
         </Navbar.Brand>
@@ -31,7 +34,7 @@ export default function AppNavbar() {
                   Workouts
                 </Nav.Link>
                 <Nav.Link as={Link} to="/logout">
-                  Logout
+                  Logout <FontAwesomeIcon icon={faUser} />
                 </Nav.Link>
               </>
             ) : (

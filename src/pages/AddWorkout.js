@@ -4,6 +4,8 @@ import UserContext from "../UserContext";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
+import "./AddWorkout.css";
+
 const AddWorkout = () => {
   const [name, setName] = useState("");
   const [duration, setDuration] = useState("");
@@ -57,40 +59,50 @@ const AddWorkout = () => {
   };
 
   return (
-    <Container className="my-5">
-      <Row className="justify-content-center align-items-center">
-        <Col xs="12" md="6" className="border shadow-lg">
-          <h2 className="text-center mb-3">Create a new Workout</h2>
-          <Form onSubmit={(e) => create(e)}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control
-                type="text"
-                placeholder="Enter workout name"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-              />
-            </Form.Group>
+    <>
+      <Container className="add-workout my-5">
+        <Row className="justify-content-center align-items-center">
+          <Col xs="12" md="5" className="mt-5 py-5">
+            <h2 className="text-center mb-3">Add new workout</h2>
+            <Form onSubmit={(e) => create(e)}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control
+                  type="text"
+                  placeholder="Enter workout name"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  className="custom-input"
+                />
+              </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control
-                type="text"
-                placeholder="Enter duration"
-                value={duration}
-                onChange={(e) => {
-                  setDuration(e.target.value);
-                }}
-              />
-            </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control
+                  type="text"
+                  placeholder="Enter duration"
+                  value={duration}
+                  onChange={(e) => {
+                    setDuration(e.target.value);
+                  }}
+                  className="custom-input"
+                />
+              </Form.Group>
 
-            <Button variant="primary" type="submit" className="mb-3">
-              Submit
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+              <Button
+                variant="primary"
+                type="submit"
+                className="mb-3 custom-input"
+              >
+                Create
+              </Button>
+            </Form>
+          </Col>
+          <Col xs="12" md="4"></Col>
+        </Row>
+      </Container>
+      =
+    </>
   );
 };
 

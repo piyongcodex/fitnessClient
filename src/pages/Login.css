@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+.login {
+  background-image: url("../../public/log-in.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  width: 100vw;
+}
+.login h1 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+}
+.login p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.custom-input {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  border-radius: 20px;
+}
+.custom-btn {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  border-radius: 20px;
+}
+.table thead th {
+  font-family: "Raleway", sans-serif; /* Using Google Font Raleway */
+  font-weight: bold;
+  font-size: 16px; /* Adjust size as needed */
+  color: #333; /* Adjust color as needed */
+}
+
+/* Define font styles for table data cells */
+.table tbody td {
+  font-family: "Raleway", sans-serif; /* Using Google Font Raleway */
+  font-size: 14px; /* Adjust size as needed */
+  color: #555; /* Adjust color as needed */
+}
+
+/* Additional styles for table, if needed */
+.table {
+  border-collapse: collapse; /* Ensure borders collapse neatly */
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 10px; /* Adjust padding as needed */
+  border: 1px solid #ddd; /* Border color and style */
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5; /* Highlight row on hover */
+}

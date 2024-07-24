@@ -3,6 +3,7 @@ import { Form, Button, Row, Col, Container } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import UserContext from "../UserContext";
+import "./Login.css";
 
 export default function Login() {
   const { user, setUser } = useContext(UserContext);
@@ -73,30 +74,31 @@ export default function Login() {
       <Navigate to="/workouts" />
     </>
   ) : (
-    <Container className="my-5 p-3">
+    <Container className="login my-5 p-3">
       <Row className="justify-content-center">
-        <Col xs="10" md="4" className="border shadow-sm">
+        <h1 className="my-5 text-center">Welcome to PiyongX fitness Tracker</h1>
+        <Col xs="10" md="5"></Col>
+        <Col xs="10" md="3" className="mt-5">
           <Form onSubmit={(e) => authenticate(e)}>
-            <h1 className="my-5 text-center">Login</h1>
             <Form.Group controlId="userEmail">
-              <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                className="custom-input"
               />
             </Form.Group>
 
             <Form.Group controlId="password">
-              <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                className="custom-input mt-3"
               />
             </Form.Group>
 
@@ -105,9 +107,9 @@ export default function Login() {
                 variant="primary"
                 type="submit"
                 id="submitBtn"
-                className="my-3"
+                className="my-3 custom-btn"
               >
-                Enter
+                login
               </Button>
             ) : (
               <Button
@@ -115,9 +117,9 @@ export default function Login() {
                 type="submit"
                 id="submitBtn"
                 disabled
-                className="my-3"
+                className="my-3 custom-btn"
               >
-                Enter
+                login
               </Button>
             )}
           </Form>

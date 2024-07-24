@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+.home {
+  background-image: url("../../public/hero-wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  width: 100vw;
+}
+.home .home-reach {
+  background-image: url("../../public/hero-reach.png");
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 400px;
+}
+.feature-img {
+  background-image: url("../../public/featured-picture.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 500px;
+}
+.about-img {
+  background-image: url("../../public/about-img.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 500px;
+}
+.home h1,
+.home p,
+.home a,
+.home label {
+  color: white;
+}
+
+.featured h1 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.featured p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.about h1 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.about p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+}
+.home h1 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.home p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
