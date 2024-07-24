@@ -1,6 +1,7 @@
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { useContext } from "react";
 import UserContext from "../UserContext";
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -19,8 +20,10 @@ export default function Home() {
             </p>
             {user.id === null ? (
               <>
-                <Button className="me-3">Sign Up</Button>
-                <label>Already a member?</label> <a href="#login">Log in</a>
+                <Link to="/register" className="btn btn-primary me-3">
+                  Sign Up
+                </Link>
+                <label>Already a member?</label> <Link to="/login">Log in</Link>
               </>
             ) : null}
           </Col>

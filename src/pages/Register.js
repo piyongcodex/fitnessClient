@@ -3,6 +3,7 @@ import { Form, Button, Container, Col, Row } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import UserContext from "../UserContext";
+import "./Register.css";
 
 export default function Register() {
   const { user } = useContext(UserContext);
@@ -63,13 +64,13 @@ export default function Register() {
   return user.id !== null ? (
     <Navigate to="/workouts" />
   ) : (
-    <Container className="my-5">
+    <Container className="register my-5">
       <Row className="justify-content-center align-items-center">
-        <Col xs="12" md="6" className="border shadow-lg">
+        <Col xs="12" md="6"></Col>
+        <Col xs="12" md="4" className="mt-5 py-5">
           <Form onSubmit={(e) => registerUser(e)}>
             <h1 className="my-5 text-center">Register</h1>
             <Form.Group>
-              <Form.Label>Email:</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter Email"
@@ -78,10 +79,10 @@ export default function Register() {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+                className="custom-item my-2"
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label>Password:</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Enter Password"
@@ -90,10 +91,10 @@ export default function Register() {
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
+                className="custom-item my-2"
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label>Confirm Password:</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Confirm Password"
@@ -102,14 +103,19 @@ export default function Register() {
                 onChange={(e) => {
                   setConfirmPassword(e.target.value);
                 }}
+                className="custom-item my-2"
               />
             </Form.Group>
             {isActive ? (
-              <Button variant="primary" type="submit" className="my-3">
+              <Button
+                variant="primary"
+                type="submit"
+                className="custom-item my-3"
+              >
                 Submit
               </Button>
             ) : (
-              <Button variant="primary" disabled className="my-3">
+              <Button variant="primary" disabled className="custom-item my-3">
                 Submit
               </Button>
             )}
